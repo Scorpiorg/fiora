@@ -4,7 +4,6 @@ WORKDIR /usr/app/fiora
 
 COPY packages ./packages
 COPY package.json tsconfig.json yarn.lock lerna.json ./
-RUN touch .env
 
 ENV Administrator=""
 ENV JwtSecret=""
