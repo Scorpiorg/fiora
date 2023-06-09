@@ -14,6 +14,7 @@ export default {
 
     redis: {
         host: env.RedisHost || 'localhost',
+        password: env.RedisPass || '123456',
         port: env.RedisPort ? parseInt(env.RedisPort, 10) : 6379,
     },
 
