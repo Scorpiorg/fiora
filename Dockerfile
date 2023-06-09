@@ -6,6 +6,13 @@ COPY packages ./packages
 COPY package.json tsconfig.json yarn.lock lerna.json ./
 RUN touch .env
 
+ENV Administrator=""
+ENV JwtSecret=""
+ENV Database=""
+ENV RedisPass=""
+
+EXPOSE 9200
+
 RUN yarn install
 
 RUN yarn build:web
